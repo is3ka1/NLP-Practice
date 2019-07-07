@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+rope = "*"
+
+[packages]
+sklearn = "*"
+jieba = "*"
+pandas = "*"
+numpy = "*"
+nltk = "*"
+beautifulsoup4 = "*"
+pyyaml = "*"
+aiohttp = "*"
+cchardet = "*"
+aiodns = "*"
+lxml = "*"
+uvloop = "*"
+
+[requires]
+python_version = "3.7"
