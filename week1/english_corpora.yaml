@@ -1,0 +1,11 @@
+- url: "https://www.apnews.com/5fef7761f14f4c65a7de982359b87bd0"
+  selectors:
+  - "h1"
+  - ".Article > p:not(:nth-last-of-type(-n+4))"
+  sep: "\n\n\n"
+
+- url: "https://www.concordmonitor.com/Trump-ask-Americans-to-stay-true-to-our-cause-26770267"
+  selectors:
+  - "h1"
+  - "#articlebody > p"
+  sep: "\n\n\n"
