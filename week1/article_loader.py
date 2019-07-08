@@ -44,7 +44,18 @@ class ArticleLoader:
 
 
 if __name__ == "__main__":
-    article_loader = ArticleLoader('target.yaml')
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description="A configurable crawler that reads on a YAML file")
+
+    parser.add_argument('file', help="file path")
+    parser.add_argument('--sep', help="strings between articles", dest="sep",
+                        default="\n\n===================================\n\n")
+
+    args = parser.parse_args()
+
+    article_loader = ArticleLoader(args.file)
     article_loader.load()
-    for article in article_loader.articles:
-        print(article['text'], end='\n\n\n')
+
+    print(*[article['text'] for article in article_loader.articles], sep=args.sep)
