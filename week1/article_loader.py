@@ -19,6 +19,8 @@ class ArticleLoader:
         uvloop.install()
         asyncio.run(self._load())
 
+        return [article['text'] for article in self.articles]
+
     async def _load(self):
         async with aiohttp.ClientSession() as session:
             await asyncio.gather(
