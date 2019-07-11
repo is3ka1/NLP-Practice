@@ -32,3 +32,8 @@ def cosine_similarity(vectors):
     return dot(vectors) / (distance(vectors[0]) * distance(vectors[1]))
 
 print(f'1-gram TF-IDF cosine similarity: {cosine_similarity(matrix)}')
+
+from wordcloud_process import wordcloud_img
+
+for i, t2t in enumerate(term_2_tfidfs):
+    wordcloud_img(t2t, f'image/Chinese_News_pure_jieba_{i}.png')
