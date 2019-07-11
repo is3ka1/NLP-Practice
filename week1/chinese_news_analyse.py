@@ -41,5 +41,5 @@ features, matrix = feature_and_matrix(articles, tokenizer=tokenizer,
 for i, vector in enumerate(matrix):
     produce_wordcloud(features, vector, f'image/Chinese_News_{i}_2+3-gram.png')
 
-print(f'2-gram + 3-gram TF-IDF cosine similarity: \
-    {cosine_similarity(matrix)[0, 1]}')
+print(f'2-gram + 3-gram TF-IDF cosine similarity: '\
+      f'{cosine_similarity(matrix)[0, 1]}')
