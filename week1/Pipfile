@@ -20,6 +20,8 @@ cchardet = "*"
 aiodns = "*"
 lxml = "*"
 uvloop = "*"
+wordcloud = "*"
+matplotlib = "*"
 
 [requires]
 python_version = "3.7"
