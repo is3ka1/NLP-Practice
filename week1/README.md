@@ -1,8 +1,8 @@
 # 中文文章比較
 
-中文文章來源： [chinese_zh-TW_corpora.yaml](week1/chinese_zh-TW_corpora.yaml)
+中文文章來源： [chinese_zh-TW_corpora.yaml](chinese_zh-TW_corpora.yaml)
 
-## 1-gram / TF-IDF by [chinese_news_analyse.py](week1/chinese_news_analyse.py)
+## 1-gram / TF-IDF by [chinese_news_analyse.py](chinese_news_analyse.py)
 
 第一篇：
 ![第一篇](image/Chinese_News_0.png)
@@ -13,7 +13,7 @@
 
 ---
 
-## 2-gram and 3-gram / TF-IDF by [chinese_news_analyse.py](week1/chinese_news_analyse.py)
+## 2-gram and 3-gram / TF-IDF by [chinese_news_analyse.py](chinese_news_analyse.py)
 
 第一篇：
 ![第一篇](image/Chinese_News_0_2+3-gram.png)
@@ -23,7 +23,7 @@
 
 ----
 
-## 1-gram / TF-IDF by [chinese_news_analyse_pure_jieba.py](week1/chinese_news_analyse_pure_jieba.py)
+## 1-gram / TF-IDF by [chinese_news_analyse_pure_jieba.py](chinese_news_analyse_pure_jieba.py)
 
 第一篇：
 ![第一篇](image/Chinese_News_pure_jieba_0.png)
@@ -33,9 +33,9 @@
 
 # 英文文章比較
 
-英文文章來源： [english_corpora.yaml](week1/english_corpora.yaml)
+英文文章來源： [english_corpora.yaml](english_corpora.yaml)
 
-## 1-gram / TF-IDF by [english_news_analyse.py](week1/english_news_analyse.py)
+## 1-gram / TF-IDF by [english_news_analyse.py](english_news_analyse.py)
 
 第一篇：
 ![第一篇](image/English_News_0.png)
@@ -45,7 +45,7 @@
 
 ---
 
-## 2-gram and 3-gram / TF-IDF by [english_news_analyse.py](week1/english_news_analyse.py)
+## 2-gram and 3-gram / TF-IDF by [english_news_analyse.py](english_news_analyse.py)
 
 第一篇：
 ![第一篇](image/English_News_0_2+3-gram.png)
