@@ -9,7 +9,7 @@
 第二篇：
 ![第二篇](image/Chinese_News_1.png)
 
-`cosine similarity: 0.7273219507342138`
+`cosine similarity: 0.6851973015140751`
 
 ---
 
@@ -19,7 +19,7 @@
 ![第一篇](image/Chinese_News_0_2+3-gram.png)
 第二篇：
 ![第二篇](image/Chinese_News_1_2+3-gram.png)
-`cosine similarity: 0.25051352653667014`
+`cosine similarity: 0.24321289573602642`
 
 ----
 
