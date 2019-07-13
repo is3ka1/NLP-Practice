@@ -17,6 +17,9 @@ articles = [re.sub('[^\u4E00-\u9FA5A-Za-z0-9]', ' ', article)
 jieba.set_dictionary('dict.txt.big')
 jieba.load_userdict('dict.txt')
 
+with open('stop_words.txt') as fd:
+    stop_words = fd.read().split()
+
 def tokenizer(sentence, flit=[' '], **kwargs):
     return [token for token in jieba.cut(sentence, **kwargs)
         if token not in flit]
@@ -30,13 +33,15 @@ def produce_wordcloud(features, vector, file_name):
     wordcloud_img(dict((k, v) for k, v in zip(features, vector) if v != 0.),
                   file_name)
 
-features, matrix = feature_and_matrix(articles, tokenizer=tokenizer)
+features, matrix = feature_and_matrix(articles, tokenizer=tokenizer,
+                                      stop_words=stop_words)
 for i, vector in enumerate(matrix):
     produce_wordcloud(features, vector, f'image/Chinese_News_{i}.png')
 print(f'1-gram TF-IDF cosine similarity: {cosine_similarity(matrix)[0, 1]}')
 
 
 features, matrix = feature_and_matrix(articles, tokenizer=tokenizer,
+                                      stop_words=stop_words,
                                       ngram_range=(2, 3))
 for i, vector in enumerate(matrix):
     produce_wordcloud(features, vector, f'image/Chinese_News_{i}_2+3-gram.png')
