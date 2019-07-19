@@ -16,12 +16,17 @@ Y = pd.get_dummies(df['Category'])['spam']
 
 x_train, x_test, y_train, y_test = train_test_split(X, Y)
 
-classifier = LogisticRegressionCV()
+classifier = LogisticRegressionCV(cv=5 , solver='liblinear')
 classifier.fit(x_train, y_train)
 
 y_pred = classifier.predict(x_test)
 cm = confusion_matrix(y_test, y_pred)
 accuracy = classifier.score(x_test, y_test)
 
-print(cm, accuracy, sep='\n')
+samples = df.loc[y_test.index].copy()
+samples['true_result'] = y_test
+samples['model_perdict'] = y_pred
 
+print(cm, accuracy, sep='\n', end='\n\n')
+
+print(samples.sample(n=10))
