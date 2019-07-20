@@ -2,7 +2,6 @@ import pandas as pd
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegressionCV
-from sklearn.naive_bayes import BernoulliNB
 from sklearn.pipeline import make_pipeline
 from sklearn.model_selection import GridSearchCV
 
@@ -33,18 +32,16 @@ Y = pd.get_dummies(df['Category'])['spam']
 x_train, x_test, y_train, y_test = train_test_split(X, Y)
 
 clf.fit(x_train, y_train)
+print(clf.best_params_)
+print(f'score: {clf.score(x_test, y_test)}')
 
 
 y_pred = clf.predict(x_test)
 cm = confusion_matrix(y_test, y_pred)
 sns.heatmap(cm, annot=True, fmt='d')
 
-print(f'score: {clf.score(x_test, y_test)}')
 
 samples = df.loc[y_test.index].copy()
 samples['true_result'] = y_test
 samples['model_perdict'] = y_pred
 print(samples.sample(n=10))
-
-
-print(clf.best_params_)
