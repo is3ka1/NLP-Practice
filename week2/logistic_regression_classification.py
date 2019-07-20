@@ -9,6 +9,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
 
 import seaborn as sns
+import matplotlib.pyplot as plt
 
 
 df = pd.read_csv('SPAM text message 20170820 - Data.csv')
@@ -39,7 +40,7 @@ print(f'score: {clf.score(x_test, y_test)}')
 y_pred = clf.predict(x_test)
 cm = confusion_matrix(y_test, y_pred)
 sns.heatmap(cm, annot=True, fmt='d')
-
+plt.show()
 
 samples = df.loc[y_test.index].copy()
 samples['true_result'] = y_test
