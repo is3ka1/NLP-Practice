@@ -22,7 +22,7 @@ clf = Pipeline([('tfidf', TfidfVectorizer(stop_words='english')),
 
 parameters = {
     'tfidf__ngram_range': [(1, 1), (1, 2), (1, 3)],
-    'clf': [LogisticRegressionCV(cv=5 , solver='newton-cg', scoring='roc_auc'),
+    'clf': [LogisticRegressionCV(cv=4 , solver='newton-cg', scoring='roc_auc'),
             SVC(gamma='auto'), BernoulliNB()],
 }
 
