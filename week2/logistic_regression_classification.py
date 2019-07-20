@@ -21,6 +21,7 @@ clf = make_pipeline(
 parameters = {
     'tfidfvectorizer__ngram_range': [(1, 1), (1, 2), (1, 3)],
     'logisticregressioncv__cv': [3, 4, 5],
+    'logisticregressioncv__solver': ['newton-cg', 'lbfgs', 'liblinear']
 }
 
 clf = GridSearchCV(clf, parameters, cv=4, scoring='roc_auc')
