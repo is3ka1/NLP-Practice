@@ -1,8 +1,14 @@
-# Result
+# Word2vec
+
+## Method
+
+我先把 `PTT_Gossiping_20161105_20161112_post.csv` 裡的 `POST_CONTENT` 欄位用空白接在一起，再把非中文字元換成空白，用 `jieba` 切詞後，存成 `ptt-post-content`，再經由 `word2vec` 訓練，中間層的維度就用預設的 `100`。
+
+## Result
 
 ![target_words_top8](target_words_top8.png)
 
-```
+```text
 媒體
 [('主流', 0.67372482) ('偏頗', 0.63249569) ('紐時', 0.62211737)
  ('自由', 0.60821955) ('任羿馨', 0.60231029) ('名人', 0.59313954)
